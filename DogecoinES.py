@@ -15,7 +15,7 @@ chat_id = 'ID DEL CHAT DE TELECGRAM'
 intervalo_tiempo = 10 #Tiempo de refresco en segundos
 umbral_subida = 0.001
 umbral_subida_str = str(umbral_subida) + '€'
-par_moneda = 'DOGEEUR'
+par_moneda = 'DOGEEUR' #Cambia esto por el par que quieras de Binance sin la barra baja.
 url = f"https://api.binance.com/api/v3/ticker/price?symbol={par_moneda}"
 headers = {'Accept': 'application/json'}
 
