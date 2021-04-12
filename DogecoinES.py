@@ -13,8 +13,8 @@ import requests
 token_bot = 'TOKEN DEL BOT DE TELEGRAM'
 chat_id = 'ID DEL CHAT DE TELECGRAM'
 intervalo_tiempo = 10 #Tiempo de refresco en segundos
-precio_diferencia_aviso = 0.001
-precio_diferencia_aviso_str = str(precio_diferencia_aviso) + '€'
+umbral_subida = 0.001
+umbral_subida_str = str(umbral_subida) + '€'
 par_moneda = 'DOGEEUR'
 url = f"https://api.binance.com/api/v3/ticker/price?symbol={par_moneda}"
 headers = {'Accept': 'application/json'}
@@ -65,7 +65,7 @@ def main():
                 print('Precio actual ' + precio_actual_str)
 
                 # Si la diferencia de precio es mayor o igual a la especificada, mostrar mensaje en consola y enviar mensaje a Telegram.
-                if  precio_diferencia >= precio_diferencia_aviso:
+                if  precio_diferencia >= umbral_subida:
 
                     print('----------------------------')
                     print("Precio anterior: " + precio_anterior_str)
