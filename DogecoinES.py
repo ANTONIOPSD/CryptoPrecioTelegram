@@ -54,7 +54,7 @@ def main():
             print(resto_tiempo)
 
             #if	resto_tiempo == 0:
-            if	minutos == 0 or minutos == 10 or minutos == 20 or minutos == 30 or minutos == 40 or minutos == 50: #Comprobamos subida de precio cada 10 minutos
+            if	minutos == 0 or minutos == 10 or minutos == 20 or minutos == 30 or minutos == 40 or minutos == 50: #Comprobamos diferencia de precio cada 10 minutos
                 precio_actual = round(obtener_precio(), 5)
                 precio_actual_str = str(precio_actual) + '€'
                 precio_diferencia = round((precio_actual - precio_anterior), 5)
